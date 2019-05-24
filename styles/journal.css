@@ -1,0 +1,13 @@
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+text area {
+    height: 200px;
+}
+button {
+    background-color: gray;
+    border-radius: 8px;
+}
