@@ -15,3 +15,12 @@ const objectsJournalEntry2 = {
 }
 const entries = []
 entries.push(objectsJournalEntry)
+
+const objectsJournalEntry3 = {
+    date: "6/6/2019",
+    topic: "",
+    entry: "",
+    mood: "anxious"
+}
+const entries = []
+entries.push(objectsJournalEntry)
