@@ -2,7 +2,7 @@ const journalEntries = [
     {
         date: "6/6/2019",
         topic: "dot notation vs bracket notation",
-        entry: "Dot notation vs bracket notation are ways to access values inside of an object. With dot notation we can access properties of an object by name with 'object.name'. You can do the same with bracket notation, but with different syntax: object['name']. Bracket notation can include variables and strings that start with numbers as long as they are written as a string within the brackets."
+        entry: "Dot notation vs bracket notation are ways to access values inside of an object. With dot notation we can access properties of an object by name with 'object.name'. You can do the same with bracket notation, but with different syntax: object['name']. Bracket notation can include variables and strings that start with numbers as long as they are written as a string within the brackets.",
         mood: "determined",
     },
     {
@@ -18,20 +18,25 @@ const journalEntries = [
         mood: "determined"
      } 
 ]
-const makeJournalEntryComponent = (journalEntry) {
+const makeJournalEntryComponent = (journalEntry) => {
     // Create your own HTML structure for a journal entry
     return `<article>
         <div>
-        <p>${journalEntry.date}</p>
-        <h3>${journalEntry.topic}</h3>
-        <p>${journalEntry.entry}</p>
-        <h6>${journalEntry.mood}</h6>
+        <h5>Date: ${journalEntry.date}</h5>
+        <h3>Concepts covered: ${journalEntry.topic}</h3>
+        <p>Journal Entry: ${journalEntry.entry}</p>
+        <h4>mood: ${journalEntry.mood}</h4>
         </div>
     </article>
     `
 }
-const entryContainer = document.querySelector("entryLog")
+const entryContainer = document.querySelector(".entryLog")
 const renderJournalEntries = (entries) => {
-    for (i = 0; i < journalEntries[].length; i++)
-    entryContainer.innerHTML += journalEntries[i] (journalEntry.date, journalEntry.topic, journalEntry.entry, journalEntry.mood)
+    console.log(entries)
+    for (i = 0; i < entries.length; i++) {
+    entryContainer.innerHTML += makeJournalEntryComponent(entries[i])
 }
+}
+renderJournalEntries(journalEntries)
+
+
