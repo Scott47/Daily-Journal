@@ -7,3 +7,12 @@ const objectsJournalEntry = {
 
 const entries = []
 entries.push(objectsJournalEntry)
+
+const objectsJournalEntry2 = {
+    date: "6/6/2019",
+    topic: "Functions and logic",
+    entry: "Functions allow you to execute a line of code whenever you need it. Functions in JavaScript allow you to be less verbose when coding. When the same lines of code need to be repeated, I can put them in a function instead of repeating myself. Functions are like a subprogram to do one particular task and are executed when called. Values can be passed into functions and functions always return a value, so you have to specify return every time. Defining functions can be done different ways which is a challenge right now. first you declare the function with a name or it can be anonymous. The double arrow function has shorter syntax. Functions have parameters that are used when defining the function and arguments are values that are passed through the function. Finally, functions execute when called and this is also called 'invoking' a function.",
+    mood: "anxious"
+ }
+ const entries = []
+ entries.push(objectsJournalEntry2)
