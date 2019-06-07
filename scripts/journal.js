@@ -16,3 +16,12 @@ const objectsJournalEntry2 = {
  }
  const entries = []
  entries.push(objectsJournalEntry2)
+
+ const objectsJournalEntry3 = {
+    date: "6/7/2019",
+    topic: "Objects",
+    entry: "Objects provide value and context to data in applications. Objects are things in the physical world that have properties that we want to represent in our application. Curly brackets signify an object in JavaScript.",
+    mood: "determined"
+ }
+ const entries = []
+ entries.push(objectsJournalEntry3)
