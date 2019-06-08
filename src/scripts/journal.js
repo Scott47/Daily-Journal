@@ -38,5 +38,3 @@ const renderJournalEntries = (entries) => {
 }
 }
 renderJournalEntries(journalEntries)
-
-
