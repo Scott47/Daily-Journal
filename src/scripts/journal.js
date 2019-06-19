@@ -4,7 +4,7 @@ API.getJournalEntries ()
     })
 
 document.querySelector("#record-entry").addEventListener("click", () => {
-    event.preventDefault()
+    // event.preventDefault()
     let recordDate = document.querySelector("#journalDate").value 
     let recordConcepts = document.querySelector("#concepts").value 
     let recordEntry = document.querySelector("#journalEntry").value
