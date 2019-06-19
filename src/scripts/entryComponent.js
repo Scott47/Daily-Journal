@@ -6,6 +6,7 @@ const makeJournalEntryComponent = (journalEntry) => {
         <h3>Concepts covered: ${journalEntry.topic}</h3>
         <p>Journal Entry: ${journalEntry.entry}</p>
         <h4>mood: ${journalEntry.mood}</h4>
+        <button class=delete-btn id=${renderJournalEntries.id}>Delete</button>
         </div>
     </article>
     `
