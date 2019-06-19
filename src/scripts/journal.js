@@ -13,25 +13,22 @@ document.querySelector("#record-entry").addEventListener("click", () => {
     } else 
     {let saveEntry = newJournalEntry(recordDate, recordConcepts, recordEntry, recordMood)
     API.saveJournalEntry(saveEntry)
-    }
-    })
-    
-const newJournalEntry = (date, concept, entry, mood) => ({
-    "Date": date,
-    "Concept": concept,
-    "Entry": entry,
-    "Mood": mood
+    .then(() => API.getJournalEntries () 
+    .then(parsedEntries => {
+        renderJournalEntries(parsedEntries)
+    }))
+}
 })
 
-    // Use `fetch` with the POST method to add your entry to your API
-    // fetch("http://localhost:8088/entries", { // Replace "url" with your API's URL
-    //     method: "POST",
-    //     headers: {
-    //         "Content-Type": "application/json"
-    //     },
-    //     body: JSON.stringify(newJournalEntry)
-    // })
-   
+const newJournalEntry = (date, concept, entry, mood) => ({
+    "date": date,
+    "topic": concept,
+    "entry": entry,
+    "mood": mood
+})
+
+// In main module, invoke method to save entry, then add item to local array.
+// Update DOM with updated array values.
     /*
     Main application logic that uses the functions and objects
     defined in the other JavaScript files.
