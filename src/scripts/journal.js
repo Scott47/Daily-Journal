@@ -9,7 +9,7 @@ document.querySelector("#record-entry").addEventListener("click", () => {
     let recordConcepts = document.querySelector("#concepts").value 
     let recordEntry = document.querySelector("#journalEntry").value
     let recordMood = document.querySelector("#mood").value
-    input.value = input.value.replace(regex, "")
+    // input.value = input.value.replace(regex, "")
     if (recordDate === "" || recordConcepts === "" || recordEntry === "") {
     } else 
     {let saveEntry = newJournalEntry(recordDate, recordConcepts, recordEntry, recordMood)
@@ -27,6 +27,7 @@ const newJournalEntry = (date, concept, entry, mood) => ({
     "entry": entry,
     "mood": mood
 })
+
 
 // In main module, invoke method to save entry, then add item to local array.
 // Update DOM with updated array values.
