@@ -32,15 +32,15 @@ let moodSelect = document.getElementsByName("mood")
     moodSelect.forEach(moodElement => {
     moodElement.addEventListener("click", event => {   
         const moody = event.target.value
-        console.log(moody)
         API.getJournalEntries().then(entries => {
-            return entries.filter(entry => {
+            let filteredEntries = entries.filter(entry => {
                 let moodChoice = false
                 if (entry.mood === moody){
                 moodChoice = true
                 }
-                console.log()
+                return moodChoice
             })
+            renderJournalEntries(filteredEntries)
         })
     });
 })
