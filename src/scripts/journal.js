@@ -33,9 +33,21 @@ let moodSelect = document.getElementsByName("mood")
     moodElement.addEventListener("click", event => {   
         const moody = event.target.value
         console.log(moody)
+        API.getJournalEntries().then(entries => {
+            return entries.filter(entry => {
+                let moodChoice = false
+                if (entry.mood === moody){
+                moodChoice = true
+                }
+                console.log()
+            })
+        })
     });
 })
-    
+
+
+
+
     
     
      
