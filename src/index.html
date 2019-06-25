@@ -10,35 +10,39 @@
 <body>
     <form action="">
         <fieldset class="container">
-            <label for="journalDate">Date of entry</label>
+            <label for="journalDate"><h5>Date of entry</h5></label>
             <input type="date" name="journalDate" id="journalDate" required="true">
         </fieldset>
 
         <fieldset class="container">
-            <label for="conceptsCovered">Concepts covered</label>
+            <label for="conceptsCovered"><h5>Concepts covered</h5></label>
             <input type="text" name="concepts" id="concepts" required="true">
         </fieldset>
 
         <fieldset class="container">
-            <label for="journalEntry">Journal Entry</label>
+            <label for="journalEntry"><h5>Journal Entry</h5></label>
             <textarea id="journalEntry">
 
             </textarea>
         </fieldset>
 
-        <fieldset class="container">
-            <label for="dailyMood">Mood for the day</label>
-                <select id= "mood" name="mood">
-                    <option value="sad">sad</option>
-                    <option value="happy">happy</option>
-                    <option value="frustrated">frustrated</option>
-                    <option value="anxious">anxious</option>
-                    <option value="relaxed">relaxed</option>
-                    <option value="excited">excited</option>
-                    <option value="determined">determined</option>
-                </select>
+        <fieldset id="moods">
+            <label for="dailyMood"><h5>Mood for the day</h5></label>
+                    
+                    <label for="zenlike">Zen-like</label>
+                    <input type="radio" id="zenlike"
+                    name="mood" value="zen">
+                   
+                   <label for="fascinated">Fascinated & Determined</label>
+                   <input type="radio" id="fascinated"
+                    name="mood" value="fasc">
+                   
+                   <label for="paralysis">Fear-induced Paralysis</label> 
+                   <input type="radio" id="paralysis"
+                    name="mood" value="para">
+                     
         </fieldset>
-
+           
         <button type="submit" id="record-entry">Record Journal Entry</button>
         
     </form>
