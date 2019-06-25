@@ -6,12 +6,13 @@ const makeJournalEntryComponent = (journalEntry) => {
         <h3>Concepts covered: ${journalEntry.topic}</h3>
         <p>Journal Entry: ${journalEntry.entry}</p>
         <h4>mood: ${journalEntry.mood}</h4>
-        <button class="delete-btn">Delete</button>
+        <button id="delete-btn">Delete</button>
         </div>
     </article>
-    `
+        `
 }
-
-const makeJournalEntryDeleteBtn = (journalEntry) => {
-    let deleteButton = document.querySelector(".delete-btn")
-}
+// function createDeleteButton (button) {
+//     let btn = document.createElement(button)
+//     btn.setAttribute(“id”, `${newJournalEntry.id}`)
+//     btn.textContent = "Delete"
+// }

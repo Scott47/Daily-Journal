@@ -28,7 +28,6 @@ const newJournalEntry = (date, concept, entry, mood) => ({
     "mood": mood
 })
 
-
 // In main module, invoke method to save entry, then add item to local array.
 // Update DOM with updated array values.
     /*
