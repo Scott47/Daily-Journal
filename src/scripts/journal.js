@@ -9,6 +9,7 @@ document.querySelector("#record-entry").addEventListener("click", () => {
     let recordConcepts = document.querySelector("#concepts").value 
     let recordEntry = document.querySelector("#journalEntry").value
     let recordMood = document.querySelector("#mood").value
+    // input.value = input.value.replace(regex, "")
     if (recordDate === "" || recordConcepts === "" || recordEntry === "") {
     } else 
     {let saveEntry = newJournalEntry(recordDate, recordConcepts, recordEntry, recordMood)

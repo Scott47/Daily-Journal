@@ -20,13 +20,6 @@
       "topic": "Objects",
       "entry": "Objects provide value and context to data in applications. Objects are things in the physical world that have properties that we want to represent in our application. Curly brackets signify an object in JavaScript.",
       "mood": "determined"
-    },
-    {
-      "date": "2019-06-12",
-      "concept": "array methods",
-      "entry": "\n           lkjlkjlkj ",
-      "mood": "sad",
-      "id": 4
     }
   ]
 }
