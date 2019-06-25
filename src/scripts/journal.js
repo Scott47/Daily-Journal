@@ -28,6 +28,18 @@ const newJournalEntry = (date, concept, entry, mood) => ({
     "mood": mood
 })
 
+let moodSelect = document.getElementsByName("mood")
+    moodSelect.forEach(moodElement => {
+    moodElement.addEventListener("click", event => {   
+        const moody = event.target.value
+        console.log(moody)
+        
+    });
+})
+    
+    
+    
+     
 // In main module, invoke method to save entry, then add item to local array.
 // Update DOM with updated array values.
     /*
@@ -38,4 +50,3 @@ const newJournalEntry = (date, concept, entry, mood) => ({
     to get the data and display it.
 */
 // objectWithGetterMethod.methodToGetData().then(functionThatRendersData)
-
