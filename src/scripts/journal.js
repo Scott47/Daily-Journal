@@ -33,7 +33,6 @@ let moodSelect = document.getElementsByName("mood")
     moodElement.addEventListener("click", event => {   
         const moody = event.target.value
         console.log(moody)
-        
     });
 })
     

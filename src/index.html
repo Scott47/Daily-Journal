@@ -25,9 +25,20 @@
 
             </textarea>
         </fieldset>
+        <fieldset>
+            <label for="moodDrop"><h5>Mood</h5></label>
+            <select id="moodDrop" name="moodDrop">
+                <option value="Zen-like">Zen-like</option>
+                <option value="Fascinated">Fascinated and Determined</option>
+                <option value="paralysis">Fear-induced Paralysis</option>
+            </select>
+        </fieldset>
 
+        <button type="submit" id="record-entry">Record Journal Entry</button>
+        <br>
+        
         <fieldset id="moods">
-            <label for="dailyMood"><h5>Mood for the day</h5></label>
+            <label for="dailyMood"><h5>Filter Journal Entries by Mood</h5></label>
                     
                     <label for="zenlike">Zen-like</label>
                     <input type="radio" id="zenlike"
@@ -39,11 +50,8 @@
                    
                    <label for="paralysis">Fear-induced Paralysis</label> 
                    <input type="radio" id="paralysis"
-                    name="mood" value="para">
-                     
+                    name="mood" value="para">               
         </fieldset>
-           
-        <button type="submit" id="record-entry">Record Journal Entry</button>
         
     </form>
 
