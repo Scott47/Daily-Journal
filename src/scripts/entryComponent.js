@@ -11,6 +11,18 @@ const makeJournalEntryComponent = (journalEntry) => {
     </article>
         `
 }
+
+const deleteButton = document.querySelector("#delete-btn")
+deleteButton.addEventListener("click", event =>  {
+    console.log(event)
+// fetch(`http://localhost:8088/entries/${id}`, {
+//     method: "DELETE",
+//     headers: {
+//         "Content-Type": "application/json"
+//     }
+// })
+// .then(res => res.json())
+})
 // function createDeleteButton (button) {
 //     let btn = document.createElement(button)
 //     btn.setAttribute(“id”, `${newJournalEntry.id}`)
