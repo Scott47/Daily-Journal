@@ -8,9 +8,10 @@ let makeJournalEntryComponent = (journalEntry) => {
         <p>Journal Entry: ${journalEntry.entry}</p> 
         <h4>>mood: ${journalEntry.mood}</h4>
         <button class="delete-btn" id="delete-${journalEntry.id}">delete</button>
+        <button class="edit-btn" id="edit-${journalEntry.id}">edit</button>
         </div>
     </article>
-        `
+    `
 }
 
 function addDeleteEventListener() {
@@ -26,6 +27,30 @@ function addDeleteEventListener() {
         })
     })
 }
+
+function addEditEventListener() {
+    let editBtnArray = document.querySelectorAll(".edit-btn")
+    console.log(editBtnArray)
+    editBtnArray.forEach(editBtn => {
+        console.log(editBtn)
+    editBtn.addEventListener("click", event =>  {
+        let editForm = event.target.id
+        console.log(editForm)
+    //     editForm = makeJournalEntryComponent(journalEntry)
+    //     makeJournalEntryComponent(editForm, journalEntry.id)
+    //     })
+    // })
+    })
+})
+}
+    //     let editBtnId = event.target.id
+    //     let editBtnIdArray = editBtnId.split("-")
+    //     console.log(editBtnIdArray)
+    //     let editBtnIdNum = editBtnIdArray[1]
+    //     API.editJournalEntry(editBtnIdNum)
+    //     })
+    // })
+
 
 
 

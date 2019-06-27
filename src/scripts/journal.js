@@ -2,6 +2,7 @@ API.getJournalEntries ()
     .then(parsedEntries => {
         renderJournalEntries(parsedEntries)
         addDeleteEventListener()
+        addEditEventListener()
     })
 
 document.querySelector("#record-entry").addEventListener("click", () => {
@@ -19,6 +20,7 @@ document.querySelector("#record-entry").addEventListener("click", () => {
     .then(parsedEntries => {
         renderJournalEntries(parsedEntries)
         addDeleteEventListener()
+        addEditEventListener()
     })) 
     }
 })
@@ -47,14 +49,6 @@ let moodSelect = document.getElementsByName("mood")
     });
 })
 
-
-
-
-
-
-    
-    
-     
 // In main module, invoke method to save entry, then add item to local array.
 // Update DOM with updated array values.
     /*

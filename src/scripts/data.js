@@ -21,5 +21,15 @@ const API = {
             }
         })
         .then(deleteEntry => deleteEntry.json())
+    },
+    editJournalEntry (id) {
+        fetch(`http://localhost:8088/resource/${id}`, {
+        method: "PUT",
+        headers: {
+        "Content-Type": "application/json"
+        },
+        body: JSON.stringify(objectContainingNewProperties)
+        })
+        .then(editEntry => editEntry.json())
     }
 }     
