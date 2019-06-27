@@ -1,6 +1,7 @@
 API.getJournalEntries () 
     .then(parsedEntries => {
         renderJournalEntries(parsedEntries)
+        addDeleteEventListener()
     })
 
 document.querySelector("#record-entry").addEventListener("click", () => {
@@ -17,8 +18,9 @@ document.querySelector("#record-entry").addEventListener("click", () => {
     .then(() => API.getJournalEntries () 
     .then(parsedEntries => {
         renderJournalEntries(parsedEntries)
-    }))
-}
+        addDeleteEventListener()
+    })) 
+    }
 })
 
 const newJournalEntry = (date, concept, entry, mood) => ({
@@ -44,6 +46,8 @@ let moodSelect = document.getElementsByName("mood")
         })
     });
 })
+
+
 
 
 
