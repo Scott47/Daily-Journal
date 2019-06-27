@@ -6,7 +6,7 @@ let makeJournalEntryComponent = (journalEntry) => {
         <h5>Date: ${journalEntry.date}</h5>
         <h3>Concepts covered: ${journalEntry.topic}</h3>
         <p>Journal Entry: ${journalEntry.entry}</p> 
-        <h4>>mood: ${journalEntry.mood}</h4>
+        <h4>mood: ${journalEntry.mood}</h4>
         <div id="editInput-${journalEntry.id}>
         </div>
         <button class="delete-btn" id="delete-${journalEntry.id}">delete</button>
@@ -38,17 +38,15 @@ function addEditEventListener() {
     editBtn.addEventListener("click", event =>  {
         let editButtonId = event.target.id
         let editBtnIdArray = editButtonId.split("-")
-        console.log(editBtnArray)
+        let editBtnIdNum = editBtnIdArray[1]
         let editForm = `<label for="journalEntry"><h5>Journal Entry</h5></label>
         <textarea id="journalEntry">
 
         </textarea>`
-        let editFormContainer = document.querySelector(`#editInput-${editBtnIdArray[1]}`)
+        let editFormContainer = document.querySelector(`#editInput-${editBtnIdNum[1]}`)
         console.log(editFormContainer)
+
     //   editForm = makeJournalEntryComponent(journalEntry)
-    //     makeJournalEntryComponent(editForm, journalEntry.id)
-    //     })
-    // })
     })
 })
 }
