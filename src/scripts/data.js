@@ -1,24 +1,25 @@
+
 const API = {
     getJournalEntries () {
         return fetch("http://localhost:8088/entries")
-            .then(response => response.json())
+        .then(response => response.json())
     },
     saveJournalEntry (newJournalEntry) {
         return fetch("http://localhost:8088/entries", { 
-    method: "POST",
-    headers: {
-        "Content-Type": "application/json"
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+             },
+            body: JSON.stringify(newJournalEntry)
+        })  
     },
-    body: JSON.stringify(newJournalEntry)
-})  
-},
-    deleteJournalEntry (deleteEntry) {
+    deleteJournalEntry (id) {
         return fetch(`http://localhost:8088/entries/${id}`, {
-    method: "DELETE",
-    headers: {
-        "Content-Type": "application/json"
+            method: "DELETE",
+            headers: {
+                "Content-Type": "application/json"
+            }
+        })
         .then(deleteEntry => deleteEntry.json())
-    },
-})
     }
-}
+}     

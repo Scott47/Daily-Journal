@@ -13,7 +13,7 @@ let makeJournalEntryComponent = (journalEntry) => {
         `
 }
 
-function deleteEntry() {
+function addDeleteEventListener() {
     let deleteBtnArray = document.querySelectorAll(".delete-btn")
     console.log(deleteBtnArray)
     deleteBtnArray.forEach(btn => {
@@ -22,9 +22,9 @@ function deleteEntry() {
         let deleteBtnIdArray = deleteBtnId.split("-")
         console.log(deleteBtnIdArray)
         let deleteBtnIdNum = deleteBtnIdArray[1]
-        deleteJournalEntry(deleteBtnIdNum)
+        API.deleteJournalEntry(deleteBtnIdNum)
+        })
     })
-})
 }
 
 
