@@ -1,6 +1,7 @@
 API.getJournalEntries () 
     .then(parsedEntries => {
         renderJournalEntries(parsedEntries)
+        deleteEntry()
     })
 
 document.querySelector("#record-entry").addEventListener("click", () => {
@@ -17,7 +18,7 @@ document.querySelector("#record-entry").addEventListener("click", () => {
     .then(() => API.getJournalEntries () 
     .then(parsedEntries => {
         renderJournalEntries(parsedEntries)
-    }))
+    })) 
 }
 })
 
@@ -44,6 +45,8 @@ let moodSelect = document.getElementsByName("mood")
         })
     });
 })
+
+
 
 
 
