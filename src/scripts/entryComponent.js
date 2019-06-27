@@ -44,16 +44,12 @@ function addEditEventListener() {
 
         </textarea>`
         let editFormContainer = document.querySelector(`#editInput-${editBtnIdNum[1]}`)
-        console.log(editFormContainer)
-
+        console.log(editFormContainer)  
     //   editForm = makeJournalEntryComponent(journalEntry)
+        })
     })
-})
 }
-    //     let editBtnId = event.target.id
-    //     let editBtnIdArray = editBtnId.split("-")
-    //     console.log(editBtnIdArray)
-    //     let editBtnIdNum = editBtnIdArray[1]
+ 
     //     API.editJournalEntry(editBtnIdNum)
     //     })
     // })
