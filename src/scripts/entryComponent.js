@@ -7,7 +7,7 @@ let makeJournalEntryComponent = (journalEntry) => {
         <h3>Concepts covered: ${journalEntry.topic}</h3>
         <p>Journal Entry: ${journalEntry.entry}</p> 
         <h4>mood: ${journalEntry.mood}</h4>
-        <div id="editInput-${journalEntry.id}>
+        <div id="editInput-${journalEntry.id}">
         </div>
         <button class="delete-btn" id="delete-${journalEntry.id}">delete</button>
         <button class="edit-btn" id="edit-${journalEntry.id}">edit</button>
@@ -43,13 +43,21 @@ function addEditEventListener() {
         <textarea id="journalEntry">
 
         </textarea>`
-        let editFormContainer = document.querySelector(`#editInput-${editBtnIdNum[1]}`)
+        let editFormContainer = document.querySelector(`#editInput-${editBtnIdNum}`)
         console.log(editFormContainer)  
+        //now you have a reference to the editFormContainer and need to stick the editForm into it.
+        //(you can use innerHTML += for this I think)
+        //you also want to put the text of that specific journal entry into the editForm, which means 
+        //you need to "GET" it from the database by using a fetch call and put it in there however text goes in a textarea
+        //(probably another innerHTML+=, just not sure if it goes inside the textarea tags or what)
+        
+
+
     //   editForm = makeJournalEntryComponent(journalEntry)
         })
     })
 }
- 
+
     //     API.editJournalEntry(editBtnIdNum)
     //     })
     // })

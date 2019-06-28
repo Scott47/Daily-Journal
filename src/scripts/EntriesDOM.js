@@ -5,4 +5,4 @@ const renderJournalEntries = (entries) => {
     entryContainer.innerHTML += makeJournalEntryComponent(entries[i])
 }
 
-}
+}   
