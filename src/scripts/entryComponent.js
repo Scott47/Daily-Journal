@@ -50,17 +50,24 @@ function addEditEventListener() {
         );
         editFormContainer.innerHTML = editForm;
         editBtn.addEventListener("click", event => {
-          let updatedText = document.querySelector(
-            `#JournalEntry-${journalEntry.id}`
-          ).value;
-          oneEntry.entry = updatedText
           let editButtonId = event.target.id;
           let editBtnIdArray = editButtonId.split("-");
           let editBtnIdNum = editBtnIdArray[1];
-          API.editJournalEntry(oneEntry, editBtnIdNum)
-          .then(revisedJournalEntry => {
-              
-          })
+          let updatedText = document.querySelector(
+            `#JournalEntry-${journalEntry.id}`
+          ).value;
+          oneEntry.entry = updatedText;
+
+          API.editJournalEntry(oneEntry, editBtnIdNum).then(
+            revisedJournalEntry => {
+              API.getJournalEntries().then(parsedEntries => {
+                renderJournalEntries(parsedEntries);
+                addDeleteEventListener();
+                addEditEventListener();
+                console.log(revisedJournalEntry)
+              });
+            }
+          );
           //here you will want to call the PUT function and give it both the ID and the updated object.
           //in the .then of that API call you will want to re-call
         });

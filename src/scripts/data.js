@@ -37,7 +37,7 @@ const API = {
 //(You can nest one of the pieces inside the object if you want to, 
 //but for now to keep it step-by-step I will suggest passing them both in.)
     editJournalEntry (editEntry, id) {
-        fetch(`http://localhost:8088/entries/${id}`, {
+        return fetch(`http://localhost:8088/entries/${id}`, {
         method: "PUT",
         headers: {
         "Content-Type": "application/json"
