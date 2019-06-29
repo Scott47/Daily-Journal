@@ -1,7 +1,7 @@
 
 const API = {
-    getJournalEntries () {
-        return fetch("http://localhost:8088/entries")
+    getJournalEntries (id) {
+        return fetch(`http://localhost:8088/entries/${id}`)
         .then(response => response.json())
     },
     saveJournalEntry (newJournalEntry) {
@@ -23,12 +23,12 @@ const API = {
         .then(deleteEntry => deleteEntry.json())
     },
     editJournalEntry (id) {
-        fetch(`http://localhost:8088/resource/${id}`, {
+        fetch(`http://localhost:8088/entries/${id}`, {
         method: "PUT",
         headers: {
         "Content-Type": "application/json"
         },
-        body: JSON.stringify(editForm)
+        body: JSON.stringify(editEntry)
         })  
         .then(editEntry => editEntry.json())
     }
