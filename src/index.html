@@ -10,23 +10,23 @@
 <body>
     <form action="">
         <fieldset class="container">
-            <label for="journalDate"><h5>Date of entry</h5></label>
+            <label for="journalDate"><h4>Date of entry</h4></label>
             <input type="date" name="journalDate" id="journalDate" required="true">
         </fieldset>
 
         <fieldset class="container">
-            <label for="conceptsCovered"><h5>Concepts covered</h5></label>
+            <label for="conceptsCovered"><h4>Concepts covered</h4></label>
             <input type="text" name="concepts" id="concepts" required="true">
         </fieldset>
 
         <fieldset class="container">
-            <label for="journalEntry"><h5>Journal Entry</h5></label>
+            <label for="journalEntry"><h4>Journal Entry</h4></label>
             <textarea id="journalEntry">
 
             </textarea>
         </fieldset>
         <fieldset>
-            <label for="moodDrop"><h5>Mood</h5></label>
+            <label for="moodDrop"><h4>Mood</h4></label>
             <select id="moodDrop" name="moodDrop">
                 <option value="Zen-like">Zen-like</option>
                 <option value="Fascinated">Fascinated and Determined</option>
@@ -38,7 +38,7 @@
         <br>
 
         <fieldset id="moods">
-            <label for="dailyMood"><h5>Filter Journal Entries by Mood</h5></label>  
+            <legend><h4>Filter Journal Entries by Mood</h4></legend> 
                     <label for="zenlike">Zen-like</label>
                     <input type="radio" id="zenlike"
                     name="mood" value="zen">

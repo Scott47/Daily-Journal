@@ -68,8 +68,6 @@ function addEditEventListener() {
               });
             }
           );
-          //here you will want to call the PUT function and give it both the ID and the updated object.
-          //in the .then of that API call you will want to re-call
         });
       });
     });
